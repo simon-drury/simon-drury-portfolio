@@ -10,9 +10,10 @@
             --card-bg: #121E27;
             --text: #E6F1F5;
             --text-muted: #94A3B8;
-            --accent-cyan: #18A0A4;
-            --accent-cyan-bright: #2AD2D8;
-            --accent-purple: #6B2D5C;
+            --cyan-bright: #2AD2D8;
+            --cyan-muted: #18A0A4;
+            --purple-bright: #A84B90;
+            --purple-dark: #6B2D5C;
             --border: #1E2D38;
         }
         body { 
@@ -25,13 +26,13 @@
             padding: 2rem 1rem; 
         }
         header { 
-            border-bottom: 2px solid var(--accent-cyan); 
+            border-bottom: 2px solid var(--purple-dark); 
             padding-bottom: 1.2rem; 
             margin-bottom: 2rem; 
         }
         h1 { 
             margin: 0 0 0.4rem 0; 
-            color: var(--accent-cyan-bright); 
+            color: var(--cyan-bright); 
             font-size: 2.2rem; 
         }
         .contact { 
@@ -39,26 +40,35 @@
             color: var(--text-muted); 
         }
         .contact a { 
-            color: var(--accent-cyan-bright); 
+            color: var(--cyan-bright); 
             text-decoration: none; 
         }
         h2 { 
-            color: var(--accent-cyan-bright); 
-            border-bottom: 1px solid var(--border); 
+            color: var(--cyan-bright); 
+            border-bottom: 2px solid var(--purple-bright); 
             padding-bottom: 0.3rem; 
-            margin-top: 2rem; 
+            margin-top: 1rem; 
         }
         h3 { 
             margin-bottom: 0.1rem; 
-            color: var(--text); 
+            color: var(--purple-bright); 
         }
         .meta { 
             font-size: 0.9rem; 
-            color: var(--accent-cyan); 
+            color: var(--cyan-muted); 
             margin-bottom: 0.5rem; 
+        }
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--purple-dark);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
         }
         ul { padding-left: 1.2rem; }
         li { margin-bottom: 0.4rem; }
+        li::marker { color: var(--cyan-bright); }
         table { 
             width: 100%; 
             border-collapse: collapse; 
@@ -70,12 +80,14 @@
             text-align: left; 
         }
         th { 
-            background: var(--card-bg); 
-            color: var(--accent-cyan-bright); 
+            background: var(--bg); 
+            color: var(--purple-bright); 
+            border-bottom: 2px solid var(--cyan-muted);
         }
         .availability { 
             background: var(--card-bg); 
-            border-left: 4px solid var(--accent-purple); 
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--cyan-bright); 
             padding: 1rem; 
             margin-top: 2rem; 
         }
